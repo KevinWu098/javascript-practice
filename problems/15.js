@@ -11,7 +11,15 @@
  * @example 15 -> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 */
 function problem(number) {
-    return null;
+    // nums = []
+    // for(i = 1; i <= number; i++){
+    //     nums.push(i)
+    // }
+
+    const nums = Array.from({length: number}, (_, i) => i+1)
+    return nums.map((item) => 
+        item % (3*5) === 0 ? item = "FizzBuzz" : item % 3 === 0 ? item = "Fizz" : item % 5 === 0 ? item = "Buzz" : item
+    )
 }
 
 const tests = [

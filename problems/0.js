@@ -9,7 +9,26 @@
  * @example 92 -> "A", 75 -> "B"
 */
 function problem(percentage) {
-    return null;
+    switch(true){
+        case percentage < 60: 
+            return 'F'
+            break
+        case percentage < 70:
+            return 'D'
+            break
+        case percentage < 80:
+            return 'C'
+            break
+        case percentage < 90:
+            return 'B'
+            break
+        case percentage <= 100:
+            return 'A'
+            break
+        default:
+            return 'Fail'
+            break
+    }
 }
 
 const tests= [

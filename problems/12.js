@@ -11,11 +11,28 @@
  * @example "apple" -> "$1.29"
 */
 function problem(fruit) {
-    return null;
+    switch(fruit.toLowerCase()){
+        case 'orange':
+            return '$1'
+            break
+        case 'apple':
+            return '$1.29'
+            break
+        case 'grapes':
+            return '$1.50'
+            break
+        case 'banana':
+            return '$0.75'
+            break
+        default:
+            return '$2'
+            break
+    }
 }
 
 const tests = [
     ["orange", "$1"],
+    ["Orange", "$1"], //added test case for uppercase fruits
     ["apple", "$1.29"],
     ["grapes", "$1.50"],
     ["banana", "$0.75"],

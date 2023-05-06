@@ -8,7 +8,20 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    // const cleanedString = str.replace(/\s+/g, "").toLowerCase()
+    // x = cleanedString.length-1; y = 0
+    // while(x > cleanedString.length/2){
+    //     if(!(cleanedString.charAt(y) == cleanedString.charAt(x)))
+    //         return false;
+    //     x--
+    //     y++
+    // }
+    // return true
+
+    const cleanedString = str.toLowerCase().replace(/\s+/g, "").split('')
+    const xx = cleanedString.map((char, i) =>
+        char === cleanedString[cleanedString.length - 1 - i])
+    return xx.every(Boolean)
 }
 
 const tests = [
